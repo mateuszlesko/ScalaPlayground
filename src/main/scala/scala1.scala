@@ -4,6 +4,7 @@ Traits = interfaces, share fileds between classes. Classes and objects can exten
 object Scala1 {
   
   trait Animal{
+    val name: String
     def speak():Unit
   }
   
@@ -11,9 +12,9 @@ object Scala1 {
     def wagTail():Unit
   }
   
-  class Dog extends Animal{
-    def speak() = print("Hau")
-    //def wagTail() = println("⎞⎜⎛  ⎞⎜⎛")
+  class Dog (val name:String) extends Animal with HasTail{
+    def speak() = println(s"Hau - $name")
+    def wagTail() = println(" wag left, wag right")
   }
     
   def play(): Unit = {
@@ -30,7 +31,8 @@ object Scala1 {
       println(elemsGt3)
       val newNumbers3 = newNumbers2.takeWhile(_ < 7).map(_ + 1)
       println(newNumbers3)  
-      val doggy = new Dog()
+      val doggy = new Dog("Rex")
+      doggy.wagTail()
       doggy.speak()
   }
  
