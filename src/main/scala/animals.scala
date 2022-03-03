@@ -1,4 +1,6 @@
 import scala.collection.mutable.ArrayBuffer
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 object Animals {
 
@@ -38,15 +40,33 @@ object Animals {
         def wagTail() = println("wag right, wag left")
     }
 
+    //names of day are in polish language
+    def getDayAsEnum(today:String): DayOfWeek = today match{
+        case "pon." => Monday
+        case "wto." => Tuesday
+        case "śro." => Wednesday
+        case "czw." => Thursday
+        case "pią." => Friday
+        case "sob." => Saturday
+        case "nie." => Sunday
+        case _ => throw new RuntimeException(“no recognised”)
+    }
+
     def play(): Unit = {
         val doggy = new Dog("Rex", Monday)
         val kitty = new Cat("Emma", Thursday)
         val homePets = ArrayBuffer.empty[Animal]
         homePets.append(doggy)
         homePets.append(kitty)
+
+        val todayDate:Date = Date()
+        val todayName:String =SimpleDateFormat("EEE").format(todayDate) //E stands for letter in name of week
+
+        //println(s"today is ${todayName}")
+
         homePets.foreach( pet => {
             pet.speak()
-            pet.shower(Thursday)
+            pet.shower(getDayAsEnum(todayName))
         })
     }
 }
