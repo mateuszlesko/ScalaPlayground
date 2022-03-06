@@ -49,7 +49,7 @@ object Animals {
         case "pią." => Friday
         case "sob." => Saturday
         case "nie." => Sunday
-        case _ => throw new RuntimeException(“no recognised”)
+        case _ => throw new RuntimeException("no recognised")
     }
 
     def play(): Unit = {

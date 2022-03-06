@@ -16,6 +16,10 @@ object Scala1 {
       val elemsGt3 = newNumbers2.takeWhile(_ > 3)
       println(elemsGt3)
       val newNumbers3 = newNumbers2.takeWhile(_ < 7).map(_ + 1)
-      println(newNumbers3)    
+      println(newNumbers3)  
+      val newNumbers4 = 1 :: newNumbers3 // add 1 at begining to the list
+      println(newNumbers4)  
+      val newNumbers5 = newNumbers2 ::: newNumbers4 // concat 2 list, add at the end
+      println(newNumbers5)
   }
 }
