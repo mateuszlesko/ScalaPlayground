@@ -12,6 +12,9 @@ In Scala every value is an object and also every function in an value..
 #### How works with JVM?
 The Scala's compiler (scalac) translate source code to bytecode (*.class). Thanks to JVM Scala can run Java's code and even use Java' libraries.
 
+### My notes during learning process:
+[Link Here](goodManiers/notes.md) 
+
 ### Good Scala code maniers:
 
 #### Sources:
