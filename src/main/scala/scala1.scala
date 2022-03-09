@@ -3,8 +3,20 @@ Traits = interfaces, share fileds between classes. Classes and objects can exten
 */
 object Scala1 {
 
+  def markExam(q1 : Double, q2 : Double, q3 : Double) : Double = {
+    val avgScore = (q1+q2+q3) / 3
+    val scaledScore = avgScore*10/3
+    Math.round(scaledScore)
+  }
+
   def play(): Unit = {
+      
       println("Hello world!")
+      
+      println(markExam(2.5,3.0,0.5))
+      
+      for (a <- "hello") println(a)
+      
       val numbers = List(1,2,3,4)
       val newNumbers = numbers.map(i => i*2)
       val newNumbers2 = newNumbers.map(_*2)

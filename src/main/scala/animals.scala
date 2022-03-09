@@ -22,7 +22,7 @@ object Animals {
     
     }
     
-    class Dog (val name:String, var showerDay : DayOfWeek) extends Animal with HasTail{
+    class Dog (val name:String = "Unknown", var showerDay : DayOfWeek) extends Animal with HasTail{
         
         def speak() = println(s"Hau hau- $name")
         
@@ -42,13 +42,13 @@ object Animals {
 
     //names of day are in polish language
     def getDayAsEnum(today:String): DayOfWeek = today match{
-        case "pon." => Monday
-        case "wto." => Tuesday
-        case "śro." => Wednesday
-        case "czw." => Thursday
-        case "pią." => Friday
-        case "sob." => Saturday
-        case "nie." => Sunday
+        case "1" => Monday
+        case "2"=> Tuesday
+        case "3" => Wednesday //unfortently polish keys are not supported
+        case "4" => Thursday
+        case "5" => Friday
+        case "6" => Saturday
+        case "7" => Sunday
         case _ => throw new RuntimeException("no recognised")
     }
 
@@ -60,13 +60,11 @@ object Animals {
         homePets.append(kitty)
 
         val todayDate:Date = Date()
-        val todayName:String =SimpleDateFormat("EEE").format(todayDate) //E stands for letter in name of week
-
-        //println(s"today is ${todayName}")
+        val todayDayNumber:String =SimpleDateFormat("u").format(todayDate) //u give number of day
 
         homePets.foreach( pet => {
             pet.speak()
-            pet.shower(getDayAsEnum(todayName))
+            pet.shower(getDayAsEnum(todayDayNumber))
         })
     }
 }
