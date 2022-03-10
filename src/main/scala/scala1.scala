@@ -33,5 +33,17 @@ object Scala1 {
       println(newNumbers4)  
       val newNumbers5 = newNumbers2 ::: newNumbers4 // concat 2 list, add at the end
       println(newNumbers5)
+
+      val numberPattern = "[0-9]+".r //way:1 - create regex
+      val letterPattern = scala.util.matching.Regex("[a-z]+")
+      val address = "123 Washington Main Street 100"
+      println(numberPattern.findFirstIn(address))
+      numberPattern.findAllIn(address).foreach(number => println(number))
+      println(letterPattern.findFirstIn(address))
+      println(s"${numberPattern.replaceFirstIn(address,"4")}")
+
+      val addressPattern = "([A-Za-z]+) ([0-9]+)".r
+      val addressPattern(street, number) = "Beniowskiego 4"
+      println(s"$street - $number") 
   }
 }

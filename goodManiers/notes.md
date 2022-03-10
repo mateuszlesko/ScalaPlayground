@@ -36,6 +36,6 @@ Scala's List is abstract class, that is extended by Nil and ::. So in Scala List
 ## The diffrence between `trait` and `abstract class`:
 Scala's `trait` works as Java's interface, it can have definition of functions' heads, however it can't have functions implementations.
 
-`abstract class` also can have this property by using keyword `abstract` in function head definition. But also it can have normal functions with their implementations.
+`abstract class` also can have this property by using keyword `abstract` in function head definition. But also it can have normal functions with their implementations. Abstract class force subclasses to its own implementaion of `abstract` method.
 
 Class can be extended by MULTIPLE `traits`, but interhait only one class
