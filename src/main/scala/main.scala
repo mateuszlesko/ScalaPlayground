@@ -9,6 +9,7 @@ object Main {
      Scala1.play()
      Scala2.play()
      Scala3.play()
+     Scala4.play()
      Animals.play()
 
      

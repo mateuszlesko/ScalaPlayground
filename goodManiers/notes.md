@@ -33,6 +33,18 @@ Seq is based on trait. Seq is an iterable structure with order of elements. Sequ
 
 Scala's List is abstract class, that is extended by Nil and ::. So in Scala List is implementation. It use LIFO access pattern. List is immuatable, also is highly optimised by compiler and library. It is FUNDAMENTAL data type - data structure in functional programming. However it has some limitation in parallel programming - in that case better to use Vector
 
+## String interpolation
+`id"text0${expr1}text1 ... ${expN}textN"`
+### In this code:
+* id = is a name of string interpolation method.
+* The textN = pieces are string constants in the input (preinterpolated)
+string.
+* The exprN = pieces are the expressions in the input string that are written
+with the $expr or ${expr} syntax.
+
+After compile the id code, the compiler translates it into code like this:
+`StringContext("text0", "text1", ..., "textN").id(expr1, ...,exprN)`
+
 ## The diffrence between `trait` and `abstract class`:
 Scala's `trait` works as Java's interface, it can have definition of functions' heads, however it can't have functions implementations.
 
