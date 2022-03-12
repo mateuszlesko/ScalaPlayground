@@ -21,6 +21,7 @@ The Scala's compiler (scalac) translate source code to bytecode (*.class). Thank
 * Books such as:
     * "Hands-on Scala Programming" by Li HAOYI
     * "Get Programming with Scala" by Daniela Sfregola
+    * "Scala Cookbook Recipes for Object Oriented and Functional Programming" by Alvin Alexander
 * Stackoverflow forum
 
 [Link Here](goodManiers/codeManiers.md) 
