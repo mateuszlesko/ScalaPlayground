@@ -1,5 +1,5 @@
 import Scala1.*
-import Animals.*
+import Animal.*
 
 //object is a Singleton it should be initialize at most once!!
 object Main {
@@ -10,7 +10,9 @@ object Main {
      Scala2.play()
      Scala3.play()
      Scala4.play()
-     Animals.play()
+     Animal.play()
+     Scala5.play()
+     Person.play()
 
      
   }
