@@ -7,3 +7,4 @@ case object Wednesday extends DayOfWeek
 case object Thursday extends DayOfWeek
 case object Friday extends DayOfWeek
 case object Saturday extends DayOfWeek
+case object NoneOfThese extends DayOfWeek

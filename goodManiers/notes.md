@@ -7,6 +7,28 @@ var stands for variable, it is mutable, val stands for value, and it is immutabl
 ### Advantages of immutable state:
 Programs are safe from concurrency incosistency in exchange from some additional memory alocation.
 
+## @main annotation
+Alternative way of declaring the entry point of executable program
+```
+object HelloWorld {
+ def main(args: Array[String]): Unit = {
+ println("Hello world!")
+ }
+} 
+
+```
+### Can be change into:
+```
+object HelloWorld {
+ @main def hello: Unit = {
+ println("Hello world!")
+ }
+}
+```
+
+## Companion object:
+Companion object is an structure that has the same name as for example class in the same file
+
 ## Any type:
 Any is the root of the class hierarchy - can be assigned to any value
 

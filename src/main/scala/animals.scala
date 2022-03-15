@@ -2,7 +2,7 @@ import scala.collection.mutable.ArrayBuffer
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-object Animals {
+
 
     trait Animal{
         
@@ -49,16 +49,23 @@ object Animals {
         case "5" => Friday
         case "6" => Saturday
         case "7" => Sunday
-        case _ => throw new RuntimeException("no recognised")
+        case _ => NoneOfThese
     }
 
+object Animal {
+    
     def play(): Unit = {
-        val doggy = new Dog("Rex", Monday)
+        val doggy1 = new Dog("Rex", Monday)
+        val doggy2 = new Dog("Ali", Friday)
         val kitty = new Cat("Emma", Thursday)
+        
         val homePets = ArrayBuffer.empty[Animal]
-        homePets.append(doggy)
-        homePets.append(kitty)
+        
+        homePets.append(doggy1)
+        homePets.append(doggy2)
 
+        homePets.append(kitty)
+        
         val todayDate:Date = Date()
         val todayDayNumber:String =SimpleDateFormat("u").format(todayDate) //u give number of day
 
