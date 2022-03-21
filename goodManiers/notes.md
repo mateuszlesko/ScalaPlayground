@@ -105,3 +105,6 @@ Scala's `trait` works as Java's interface, it can have definition of functions' 
 `abstract class` also can have this property by using keyword `abstract` in function head definition. But also it can have normal functions with their implementations. Abstract class force subclasses to its own implementaion of `abstract` method.
 
 Class can be extended by MULTIPLE `traits`, but interhait only one class
+
+## Sealed
+Sealed is used to limit the elements which can be extended, to only that are in the same file where the interface are declared.

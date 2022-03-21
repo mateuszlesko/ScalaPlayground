@@ -13,8 +13,8 @@ object Main {
      Animal.play()
      Scala5.play()
      Person.play()
-
-     
+     Scala6.play()
+     TimeApp.play()
   }
 
 }
